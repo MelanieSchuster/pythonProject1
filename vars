@@ -1,0 +1,13 @@
+a = 10
+b = -5246196864864548465148468
+c = a + b
+print(type(c))
+print('c:' + str(c))
+print ('c{}'.format(c))
+
+
+af = 242.033
+bf = 65654654846465164654658979879879846545132123161484.352
+cf = af + bf
+print(type(cf))
+print('cf:{}'.format(cf))
