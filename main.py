@@ -5,6 +5,8 @@
 
 
 def print_hi(name):
+    a=10
+    print(a)
     '''
     what print_hi is supposed to do
     :param name: # What this parameter means
