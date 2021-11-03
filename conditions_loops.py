@@ -6,8 +6,8 @@ if p and not q:
 else:
     print("p and q = NOT TRUE")
 
-of p or q:
-    print("p or q" = TRUE)
+if p or q:
+    print("p or q = TRUE")
 else:
     print("p or q = NOT TRUE")
 
@@ -17,8 +17,8 @@ if p ^ q:
 else:
     print("p or q = NOT TRUE")
 
-for i range(2, 8)
-   if i==3
+for i in range(2, 8):
+    if i==3:
        continue
     print(i)
     if i==5:
@@ -27,4 +27,4 @@ for i range(2, 8)
 def sum(a, b):
     return a + b
 
-print(sum(a + b))
+print(sum(56, 3))
