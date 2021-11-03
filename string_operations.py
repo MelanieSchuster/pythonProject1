@@ -34,3 +34,7 @@ if __name__ == '__main__':
         print('s4 and s5 not equal')
     s6 = '542352\t34535334\t513516521656\t6636'
     print(s6.split('\t'))
+
+    s7 = 'can\'t'
+    s7 = "can't" + "cite"
+    print(s7)
