@@ -1,18 +1,15 @@
-N1=101
-for num in range(1,N1):
-    for i in range(2,num):
-        if (num%i==0):
+N = int(input('How many prime numbers do you want to print? N = '))
+#insert the number of the first N prime numbers to print
+a = 2
+#because prime numbers begin with 2
+while N!=0:
+#for N not zero
+    for i in range(2, a):
+        if a%i==0:
             break
-        else:
-            print(num)
-            break
-
-N = 10
-for i in range(2,N+1):
-    for j in range(2,i):
-        if(i%j == 0):
-            break
+#if the number can be devided by 2 without a leftover, then it is not a prime number and should not be printed
     else:
-        print(i)
-
-#the second version is better but we didn't had this either
+        print(a)
+        N -= 1
+    a += 1
+#after getting the prime number, 'N' has to be decreased, but 'a' has to be increased.
