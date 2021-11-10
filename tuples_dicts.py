@@ -12,5 +12,5 @@ print(d1['a'])
 for k, v, in d1.items():
     print('{}: {}'.format(k, v))
 
-for k, v in d1.keys():
+for k, v, in d1.keys():
     print('{}: {}'.format(k, d1[k]))
