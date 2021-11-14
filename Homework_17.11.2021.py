@@ -1,9 +1,9 @@
 N = int(input('How many prime numbers do you want to print? N = '))
-#insert the number of the first N prime numbers to print
+#insert the number of the first N prime numbers you want to print (N must be a number)
 a = 2
-#because zero and one are no prime numbers by definition I start checking if the numbers are prime numbers beginning from 2
+#because zero and one are no prime numbers by definition the program starts checking if the numbers are prime numbers beginning from 2
+#for N not zero (when N is zero, then we have the amount of prime numbers that we want to have and it stops)
 while N!=0:
-#for N not zero
     for i in range(2, a):
         if a%i==0:
             break
