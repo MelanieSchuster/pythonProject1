@@ -15,3 +15,4 @@ while N!=0:
     a += 1
 #after getting the prime number, 'N' has to be decreased.
 #In any cases a has to be increased to check the next number.
+#The program is running until N prime numbers are found and N equals zero.
