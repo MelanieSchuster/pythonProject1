@@ -16,3 +16,6 @@ while N!=0:
 #after getting the prime number, 'N' has to be decreased.
 #In any cases a has to be increased to check the next number.
 #The program is running until N prime numbers are found and N equals zero.
+
+#the script can be found in the following Gut link:
+#https://github.com/MelanieSchuster/pythonProject1/blob/master/Homework_17.11.2021.py
