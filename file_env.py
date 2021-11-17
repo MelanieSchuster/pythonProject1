@@ -7,13 +7,13 @@ print(platform.system())
 print(platform.release())
 print(platform.architecture())
 
-#print(os.path.expanduser('~'))
-#with tempfile.NamedTemporaryFile(mode='w', encoding='uft-8', delete=False) as my_temp_file:
-#    print(my_temp_file.name)
-#    my_temp_file.write("Bla\n")
-#    my_temp_file.write("abc")
-#    my_temp_file.close()
-#    print('closed')
+print(os.path.expanduser('~'))
+with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', delete=False) as my_temp_file:
+    print(my_temp_file.name)
+    my_temp_file.write("Bla\n")
+    my_temp_file.write("abc")
+    my_temp_file.close()
+    print('closed')
 
 print(os.getcwd())
 print('----------')
