@@ -1,16 +1,17 @@
 #https://www.delftstack.com/howto/python/python-count-words-in-string/
-def word_count(str):
-    counts = dict()
-    words = str.split()
+if __name__ == '__main__':
+    def word_count(str):
+        counts = dict()
+        words = str.split()
 
-    for word in words:
-        if word in counts:
-            counts[word] += 1
-        else:
-            counts[word] = 1
+        for word in words:
+            if word in counts:
+                counts[word] += 1
+            else:
+                counts[word] = 1
 
-    return counts
+        return counts
 
-print( word_count('the quick brown fox jumps over the lazy dog.'))
+    print( word_count('the quick brown fox jumps over the lazy dog.'))
 
 #einfach nur aus dem Internet kopiert, bitte selbst versuchen und etwas ändern
