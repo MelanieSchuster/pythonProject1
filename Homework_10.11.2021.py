@@ -10,6 +10,8 @@ if __name__ == '__main__':
         #remove special symbols and put all words in lower case
         line = line.strip()
         line = re.sub(r"[^a-zA-Z ]", "", line)
+        #depending on the text you use, sometimes you have to delete the numbers, sometimes not.
+        #Here the numbers are deleted, but if you don't want to delete them, you have to put them into the brackets "[]"
         line = line.lower()
         words = line.split(" ")
         for word in words:
