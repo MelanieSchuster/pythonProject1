@@ -5,7 +5,7 @@ d1['ddd'] = 436536
 with open('data/out_d.data', 'wb') as f:
     _pickle.dump(d1, f)
 
-with open('data/out_d.data', 'wb') as f:
+with open('data/out_d.data', 'rb') as f:
     out_d = _pickle.load(f)
     print(out_d)
     print(type(out_d))
