@@ -1,11 +1,11 @@
 import re
 
 if __name__ == '__main__':
-    file = "text.txt"
-    #the file has to be in the same directonary as the project
-    text = open(file, 'r')
+    #the file has to be in the same directonary as the project and named "text"
+    text = open("text.txt", 'r')
     #open the file in read mode
     dict = dict()
+    #create an empty dictionary
     for line in text:
         #remove special symbols and put all words in lower case
         line = line.strip()
@@ -14,6 +14,7 @@ if __name__ == '__main__':
         #Here the numbers are deleted, but if you don't want to delete them, you have to put them into the brackets "[]"
         line = line.lower()
         words = line.split(" ")
+        #split the line into words
         for word in words:
             if word in dict:
                 dict[word] = dict[word]+1
