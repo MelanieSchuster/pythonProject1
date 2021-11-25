@@ -23,4 +23,4 @@ if __name__ == '__main__':
                 #count one more if the word is in the dictionary, otherwise put the word into the dictionary
     print(dict)
     #print the dictionary
-#you find this script on git: https://github.com/MelanieSchuster/pythonProject1/blob/master/Homework_10.11.2021.py
+#you find this script on git: https://github.com/MelanieSchuster/pythonProject1/blob/master/Homework_01.12.2021.py
