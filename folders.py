@@ -15,4 +15,27 @@ for file in os.listdir(python_folder):
 print('Sum space: {}'.format(sum_bytes))
 
 # 1. include summing space occupied for folders with their content
-# Hint: use recersion
+# Hint: use recursion
+# step 1: create a function that iterates over files in a folder and returns the sum of the size
+# step 2: add a condition for the case of a folder - then the function should call
+# itself for the subfolder as input parameter
+
+print('-------------')
+
+if __name__ == '__main__':
+    def folder_recursion(sum_bytes2):
+        sum_bytes2=0
+        folder = 'C:/Users/schus/Documents/Bewerbungsunterlagen'
+        for file in os.listdir(folder):
+            f2 = os.path.join(folder, file)
+            if os.path.isfile(f2):
+            #folders are not treated
+            #print(file)
+            #print(os.stat(file))
+                sum_bytes2 += os.path.getsize(f)
+            #print(os.path.getsize(file))
+            else:
+                for file in os.path.islink(folder):
+                    sum_bytes2 += os.path.getsize(folder)
+            return file + folder_recursion(sum_bytes2)
+    print('Sum space: {}'.format(folder_recursion(sum_bytes2)))
