@@ -11,11 +11,21 @@ from urllib.request import urlopen
 # repeat this for every file to download the CSV files. As I did it before I put the commands as comments to not repeat it every time I run the program.
 
 if __name__ == '__main__':
-    directory = os.path.join('c:\\', 'C:/Users/schus/PycharmProjects/pythonProject1/data')
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith(".csv"):
-                f = open(file, 'r')
-                print(f)
-                f.colse()
+    GOOG = 'data/GOOG.csv'
+    IBM = 'data/IBM.csv'
+    MSFT = 'data/MSFT.csv'
+    open(GOOG, 'rb')
+    csv_writer = csv.writer(GOOG)
+    for i, row in enumerate(GOOG):
+        if i != 0:
+            row.append(float[10] / float(row[37]))
+            csv_writer.writerow(row)
+
+    #directory = os.path.join('c:\\', 'C:/Users/schus/PycharmProjects/pythonProject1/data')
+    #for root, dirs, files in os.walk(directory):
+      #  for file in files:
+       ##     if file.endswith(".csv"):
+         #       f = open(file, 'r')
+          #      print(f)
+           #     f.colse()
 #vielleicht mit den festen Namen und einer Datei anfangen um wenigstens einen Anfang zu haben
