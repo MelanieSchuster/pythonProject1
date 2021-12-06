@@ -18,3 +18,4 @@ if __name__ == '__main__':
                 f = open(file, 'r')
                 print(f)
                 f.colse()
+#vielleicht mit den festen Namen und einer Datei anfangen um wenigstens einen Anfang zu haben
