@@ -48,3 +48,17 @@ def get_stocks():
           #      print(f)
            #     f.colse()
 #vielleicht mit den festen Namen und einer Datei anfangen um wenigstens einen Anfang zu haben
+
+from csv import writer
+from csv import reader
+def add_column (old_GOOG, new_GOOG, lambda_row, line_num: row.append((row[5]-row[2])/row[2])):
+    with open('C:/Users/schus/PycharmProjects/pythonProject1/data/GOOG.csv', 'r') as old_GOOG, \
+        open('C:/Users/schus/PycharmProjects/pythonProject1/data/new_GOOG.csv', 'w', newline='') as new_GOOG:
+        csv_reader = reader(old_GOOG)
+        csv_writer = writer(new_GOOG, lineterminator='\n')
+        for row in csv_reader:
+            csv_writer.writerow(row)
+
+
+IBM = 'data/IBM.csv'
+MSFT = 'data/MSFT.csv'
