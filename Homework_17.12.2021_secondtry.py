@@ -9,13 +9,18 @@ from urllib.request import urlopen
 
 # repeat this for every file to download the CSV files. As I did it before I put the commands as comments to not repeat it every time I run the program.
 
-from csv import reader as csv_reader
+import csv
 import json
 
-def csv_to_json(csv_path: str, headers: bool) -> list:
+GOOG = 'data/GOOG.csv'
+IBM = 'data/IBM.csv'
+MSFT = 'data/MSFT.csv'
+
+def csv_to_json(csv_path, headers) -> list:
+    data = {}
     json_data = []
-    with open('C:/Users/schus/PycharmProjects/pythonProject1/data/GOOG.csv', 'r') as file:
-        reader = csv_reader(file)
+    with open(csv_path, encoding='uft-8') as file:
+        reader = csv.DictReader(file)
         if headers:
             columns = next(reader)
         for row in reader:
@@ -28,3 +33,4 @@ def csv_to_json(csv_path: str, headers: bool) -> list:
             row_data[row_key] = row[i]
         json_data.append(row_data)
     return json_data
+    csv_path = 'data/GOOG.csv'
