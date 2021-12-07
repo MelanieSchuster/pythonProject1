@@ -14,12 +14,13 @@ if __name__ == '__main__':
     GOOG = 'data/GOOG.csv'
     IBM = 'data/IBM.csv'
     MSFT = 'data/MSFT.csv'
-    open(GOOG, 'rb')
-    csv_writer = csv.writer(GOOG)
-    for i, row in enumerate(GOOG):
-        if i != 0:
-            row.append(float[10] / float(row[37]))
-            csv_writer.writerow(row)
+    with open(GOOG, newline='') as old_GOOG:
+        spamwriter = csv.writer(old_GOOG, delimitor = ' ', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        for i, row in enumerate(GOOG):
+            if i != 0:
+                row.append(float[10] / float(row[37]))
+                csv_writer.writerow(row)
+#https://docs.python.org/3/library/csv.html
 
     #directory = os.path.join('c:\\', 'C:/Users/schus/PycharmProjects/pythonProject1/data')
     #for root, dirs, files in os.walk(directory):
