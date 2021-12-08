@@ -51,7 +51,8 @@ def get_stocks():
 
 from csv import writer
 from csv import reader
-def add_column (old_GOOG, new_GOOG, lambda_row, line_num: row.append((row[5]-row[2])/row[2])):
+row = 0
+def add_column (old_GOOG, new_GOOG, lambda_row, line_num: row):
     with open('C:/Users/schus/PycharmProjects/pythonProject1/data/GOOG.csv', 'r') as old_GOOG, \
         open('C:/Users/schus/PycharmProjects/pythonProject1/data/new_GOOG.csv', 'w', newline='') as new_GOOG:
         csv_reader = reader(old_GOOG)
