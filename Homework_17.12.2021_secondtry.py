@@ -9,30 +9,45 @@ from urllib.request import urlopen
 
 # repeat this for every file to download the CSV files. As I did it before I put the commands as comments to not repeat it every time I run the program.
 
+#importing the module
 import csv
-import json
 
-csv.reader('data/GOOG.csv', 'r')
+#open the file in read mode
+filename = open('data/GOOG.csv', 'r')
+
+#creating dictreader object
+file = csv.DictReader(filename)
+
+#creating empty lists
+Date = []
+Open = []
+High = []
+Low = []
+Close = []
+AdjClose = []
+Volume = []
+
+#iterating over each row and append values to empty list
+for col in file:
+    Date.append(col['Date'])
+    Open.append(col['Open'])
+    High.append(col['High'])
+    Low.append(col['Low'])
+    Close.append(col['Close'])
+    AdjClose.append(col['Adj Close'])
+    Volume.append(col['Volume'])
+
+#printing lists
+print('Date:', Date)
+print('Open:', Open)
+print('High:', High)
+print('Low:', Low)
+print('Close:', Close)
+print('AdjClose:', AdjClose)
+print('Volume:', Volume)
 
 GOOG = 'data/GOOG.csv'
 IBM = 'data/IBM.csv'
 MSFT = 'data/MSFT.csv'
 
-#def csv_to_json(csv_path, headers) -> list:
- #   data = {}
-  #  json_data = []
-   # with open(csv_path, encoding='uft-8') as file:
-    #    reader = csv.DictReader(file)
-     #   if headers:
-       #     columns = next(reader)
-      #  for row in reader:
-        #    row_data = {}
-         #   for i in range(len(row)):
-          #      if headers:
-           #         row_key = columns[i].lower()
-            #    else:
- #                   row_key = i
-  #          row_data[row_key] = row[i]
-   #     json_data.append(row_data)
-   # return json_data
-    #csv_path = 'data/GOOG.csv'
+

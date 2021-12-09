@@ -63,3 +63,23 @@ def add_column (old_GOOG, new_GOOG, lambda_row, line_num: row):
 
 IBM = 'data/IBM.csv'
 MSFT = 'data/MSFT.csv'
+
+
+#def csv_to_json(csv_path, headers) -> list:
+ #   data = {}
+  #  json_data = []
+   # with open(csv_path, encoding='uft-8') as file:
+    #    reader = csv.DictReader(file)
+     #   if headers:
+       #     columns = next(reader)
+      #  for row in reader:
+        #    row_data = {}
+         #   for i in range(len(row)):
+          #      if headers:
+           #         row_key = columns[i].lower()
+            #    else:
+ #                   row_key = i
+  #          row_data[row_key] = row[i]
+   #     json_data.append(row_data)
+   # return json_data
+    #csv_path = 'data/GOOG.csv'
