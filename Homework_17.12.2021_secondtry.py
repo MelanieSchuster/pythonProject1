@@ -37,7 +37,7 @@ for col in file:
     AdjClose.append(col['Adj Close'])
     Volume.append(col['Volume'])
 
-#converting the strings into integers
+#converting the strings into integers (still without any digits -> change this)
 OpenI = []
 for element in Open:
     OpenI.append(int(float(element)))
