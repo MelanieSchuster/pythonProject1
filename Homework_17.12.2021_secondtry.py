@@ -37,14 +37,39 @@ for col in file:
     AdjClose.append(col['Adj Close'])
     Volume.append(col['Volume'])
 
+#converting the strings into integers
+OpenI = []
+for element in Open:
+    OpenI.append(int(float(element)))
+
+CloseI = []
+for element in Close:
+    CloseI.append(int(float(element)))
+
+#calculation of the changes
+Change = []
+for i in range(len(OpenI)):
+    Change.append((CloseI[i]-OpenI[i])/OpenI[i])
+
+
 #printing lists
 print('Date:', Date)
-print('Open:', Open)
+print('Open:', OpenI)
 print('High:', High)
 print('Low:', Low)
-print('Close:', Close)
+print('Close:', CloseI)
 print('AdjClose:', AdjClose)
 print('Volume:', Volume)
+print('Change:', Change)
+Header = ["Date", "Open", "High", "Low", "Close", "AdjClose", "Volume", "Change"]
+
+#making a file out of it
+rows = zip(Date, OpenI, High, Low, CloseI, AdjClose, Volume, Change)
+file = open('data/new_GOOG.csv', 'w+', newline='')
+with file:
+    write = csv.writer(file)
+    write.writerow(Header)
+    write.writerows(rows)
 
 GOOG = 'data/GOOG.csv'
 IBM = 'data/IBM.csv'
