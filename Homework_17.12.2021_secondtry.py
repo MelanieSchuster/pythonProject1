@@ -8,7 +8,6 @@ url = ['https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=158704
 'https://query1.finance.yahoo.com/v7/finance/download/IBM?period1=1587042293&period2=1618578293&interval=1d&events=history&includeAdjustedClose=true',
 'https://query1.finance.yahoo.com/v7/finance/download/MSFT?period1=1587042293&period2=1618578293&interval=1d&events=history&includeAdjustedClose=true'
 ]
-
 for i, j in zip(csv, url):
     local_path = os.path.join('data', i)
     with urlopen(j) as file, open(local_path, 'wb') as f:
