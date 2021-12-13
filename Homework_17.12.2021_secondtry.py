@@ -52,7 +52,6 @@ Change = []
 for i in range(len(OpenI)):
     Change.append((CloseI[i]-OpenI[i])/OpenI[i])
 
-
 #printing lists
 print('GOOGLE')
 print('Date:', Date)
@@ -110,7 +109,6 @@ Change = []
 for i in range(len(OpenI)):
     Change.append((CloseI[i]-OpenI[i])/OpenI[i])
 
-
 #printing lists
 print('IBM')
 print('Date:', Date)
@@ -167,7 +165,6 @@ for element in Close:
 Change = []
 for i in range(len(OpenI)):
     Change.append((CloseI[i]-OpenI[i])/OpenI[i])
-
 
 #printing lists
 print('MSFT')
