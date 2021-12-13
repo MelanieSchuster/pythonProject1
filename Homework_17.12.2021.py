@@ -1,3 +1,15 @@
+import csv
+import os
+
+#open the file in read mode
+directory = 'data'
+data = os.listdir(directory)
+
+for file in directory:
+    if file.lower().endswith('.csv'):
+        with open(f'{directory}/{file}', 'r') as csv_file:
+            reader = csv.reader(csv_file, delimiter=',')
+
 import os
 import csv
 from urllib.request import urlopen
