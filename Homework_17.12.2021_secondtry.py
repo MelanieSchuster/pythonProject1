@@ -4,9 +4,9 @@ from urllib.request import urlopen
 
 csv = ['GOOG.csv', 'IBM.csv', 'MSFT.csv']
 
-url = ['https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1587042293&period2=1618578293&interval=1d&events=history&includeAdjustedClose=true',
-'https://query1.finance.yahoo.com/v7/finance/download/IBM?period1=1587042293&period2=1618578293&interval=1d&events=history&includeAdjustedClose=true',
-'https://query1.finance.yahoo.com/v7/finance/download/MSFT?period1=1587042293&period2=1618578293&interval=1d&events=history&includeAdjustedClose=true'
+url = ['https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1608130081&period2=1639666081&interval=1d&events=history&includeAdjustedClose=true',
+'https://query1.finance.yahoo.com/v7/finance/download/IBM?period1=1608130130&period2=1639666130&interval=1d&events=history&includeAdjustedClose=true',
+'https://query1.finance.yahoo.com/v7/finance/download/IBM?period1=1608130160&period2=1639666160&interval=1d&events=history&includeAdjustedClose=true'
 ]
 for i, j in zip(csv, url):
     local_path = os.path.join('data', i)
