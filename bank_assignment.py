@@ -21,12 +21,12 @@ class Account:
 
     # TODO - add methods "charge" and "deposit" that will change the balance
     # validation system
-    def check_Pin(self, value):
+    def checkPin(self, value):
         return self.pin == value
 
     # Function to make a deposit
     def deposit(self, pin, amount):
-        if self.check_Pin(self.pin):
+        if self.checkPin(self.pin):
             self._balance += amount
             print("\n Amount Deposited", amount)
         else:
@@ -34,7 +34,7 @@ class Account:
 
     # Function that will make a charge
     def charge(self, pin, amount):
-        if self.check_Pin(self.pin):
+        if self.checkPin(self.pin):
             if amount <= self._balance:
                 self._balance -= amount
                 print("\n You Withdrew from the account: ", amount)
@@ -73,6 +73,7 @@ class Bank:
         self.acc_list.append(a)
         return a
     #def transfer(self, from_account_id, to_account_id, amount):
+    # validation of IBAN
         #TODO - please note that you might need to find the "from" and "to" accounts in the list
         # based on the ids provided as input
     def __repr__(self):
@@ -84,13 +85,15 @@ c2 = b.new_customer('Anna', 'Smith', 'anne@smith.com')
 a1 = b.new_account(c1, is_savings=True)
 a2 = b.new_account(c1, is_savings=False)
 
+print(input("Enter pin: "))
+
 a = Account(c1)
-a.check_Pin(c1)
+a.checkPin(c1)
 a.deposit(c1, 2500)
 a.charge(c1, 100)
 
 a2 = Account(c2)
-a2.check_Pin(c2)
+a2.checkPin(c2)
 a2.deposit(c2, 300)
 a2.charge(c2, 100)
 
