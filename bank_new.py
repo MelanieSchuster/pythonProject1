@@ -79,7 +79,9 @@ class Bank:
         return a
     def transfer(self, from_account_id, to_account_id, amount_out):
         self.from_account_id(amount_out)
+        Customer._balance -= amount_out
         self.to_account_id(amount_out)
+        Customer._balance += amount_out
     # validation of IBAN
         #TODO - please note that you might need to find the "from" and "to" accounts in the list
         # based on the ids provided as input
@@ -92,13 +94,14 @@ c1 = b.new_customer('John', 'Brown', 'john@brown.com')
 c2 = b.new_customer('Anna', 'Smith', 'anne@smith.com')
 a1 = b.new_account(c1, is_savings=True)
 a2 = b.new_account(c1, is_savings=False)
-
+b.transfer(1, 2, 20)
 
 
 a = Account(c1)
 a.checkPin(c1)
 a.deposit(c1, 2500)
 a.charge(c1, 100)
+
 
 a2 = Account(c2)
 a2.checkPin(c2)
