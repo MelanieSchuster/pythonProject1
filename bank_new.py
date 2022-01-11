@@ -64,12 +64,12 @@ class Bank:
         self.cust_list = []
         self.acc_list = []
     def new_customer(self, first_name, last_name, email):
-        #TODO - create a new customer, add it to a list of customers
+        #create a new customer, add it to a list of customers
         c = Customer(first_name, last_name, email)
         self.cust_list.append(c)
         return c
     def new_account(self, customer, is_savings=True):
-        #TODO - create a new account and add it to the list of accounts
+        #create a new account and add it to the list of accounts
         # if is_savings:
         #     a = SavingsAccount(customer)
         # else:
