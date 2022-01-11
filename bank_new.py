@@ -19,7 +19,7 @@ class Account:
         self._balance = 0
         self.pin = "1234"
 
-    # TODO - add methods "charge" and "deposit" that will change the balance
+    # add methods "charge" and "deposit" that will change the balance
     # validation system
     def checkPin(self, pin):
         if self.pin == pin:
