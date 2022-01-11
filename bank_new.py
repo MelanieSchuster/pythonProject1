@@ -77,7 +77,9 @@ class Bank:
         a = SavingsAccount(customer) if is_savings else CheckingAccount(customer)
         self.acc_list.append(a)
         return a
-    #def transfer(self, from_account_id, to_account_id, amount):
+    def transfer(self, from_account_id, to_account_id, amount_out):
+        self.from_account_id(amount_out)
+        self.to_account_id(amount_out)
     # validation of IBAN
         #TODO - please note that you might need to find the "from" and "to" accounts in the list
         # based on the ids provided as input
