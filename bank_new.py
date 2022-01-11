@@ -17,16 +17,20 @@ class Account:
         self.id = Account.last_id
         self.customer = customer
         self._balance = 0
-        self.pin = 1234
+        self.pin = "1234"
 
     # TODO - add methods "charge" and "deposit" that will change the balance
     # validation system
-    def checkPin(self, value):
-        return self.pin == value
+    def checkPin(self, pin):
+        if self.pin == pin:
+            return True
+        else:
+            return False
 
     # Function to make a deposit
     def deposit(self, pin, amount):
-        if self.checkPin(self.pin):
+        pin = input("\n Please Enter pin code: ")
+        if self.checkPin(pin) is True:
             self._balance += amount
             print("\n Amount Deposited", amount)
         else:
@@ -34,7 +38,8 @@ class Account:
 
     # Function that will make a charge
     def charge(self, pin, amount):
-        if self.checkPin(self.pin):
+        pin = input("\n Please Enter pin code: ")
+        if self.checkPin(pin) is True:
             if amount <= self._balance:
                 self._balance -= amount
                 print("\n You Withdrew from the account: ", amount)
@@ -85,7 +90,7 @@ c2 = b.new_customer('Anna', 'Smith', 'anne@smith.com')
 a1 = b.new_account(c1, is_savings=True)
 a2 = b.new_account(c1, is_savings=False)
 
-print(input("Enter pin: "))
+
 
 a = Account(c1)
 a.checkPin(c1)
