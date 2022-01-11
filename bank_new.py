@@ -17,20 +17,31 @@ class Account:
         self.id = Account.last_id
         self.customer = customer
         self._balance = 0
+        self.pin = 1234
 
     # TODO - add methods "charge" and "deposit" that will change the balance
+    # validation system
+    def checkPin(self, value):
+        return self.pin == value
+
     # Function to make a deposit
-    def deposit(self, amount):
-        self._balance += amount
-        print("\n Amount Deposited", amount)
+    def deposit(self, pin, amount):
+        if self.checkPin(self.pin):
+            self._balance += amount
+            print("\n Amount Deposited", amount)
+        else:
+            print("\n Wrong Pin. Please try again.")
 
     # Function that will make a charge
-    def charge(self, amount):
-        if amount <= self._balance:
-            self._balance -= amount
-            print("\n You Withdrew from the account: ", amount)
+    def charge(self, pin, amount):
+        if self.checkPin(self.pin):
+            if amount <= self._balance:
+                self._balance -= amount
+                print("\n You Withdrew from the account: ", amount)
+            else:
+                print("\n Not enough money on that account")
         else:
-            print("\n Not enough money on that account")
+            print("\n Wrong pin code. Please try again.")
 
     def __repr__(self):
         return '{}[{},{},{}]'.format(self.__class__.__name__, self.id, self.customer.last_name, self._balance)
@@ -74,13 +85,17 @@ c2 = b.new_customer('Anna', 'Smith', 'anne@smith.com')
 a1 = b.new_account(c1, is_savings=True)
 a2 = b.new_account(c1, is_savings=False)
 
+print(input("Enter pin: "))
+
 a = Account(c1)
-a.deposit(c1, 500)
-a.charge(c1, 200)
+a.checkPin(c1)
+a.deposit(c1, 2500)
+a.charge(c1, 100)
 
 a2 = Account(c2)
+a2.checkPin(c2)
 a2.deposit(c2, 300)
-a2.charge(c2, 50)
+a2.charge(c2, 100)
 
 print(b)
 print(a)
