@@ -1,3 +1,19 @@
+
+class BankError(Exception):
+    pass
+
+class AccountNotExistError(BankError):
+    pass
+
+class NotEnoughMoneyError(BankError):
+    pass
+
+class NegativeAmountError(BankError):
+    pass
+
+
+
+
 class Customer:
     last_id = 0
 
