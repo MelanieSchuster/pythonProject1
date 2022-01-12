@@ -90,7 +90,7 @@ b = Bank()
 c1 = b.new_customer('John', 'Brown', 'john@brown.com')
 c2 = b.new_customer('Anna', 'Smith', 'anne@smith.com')
 a1 = b.new_account(c1, is_savings=True)
-a2 = b.new_account(c1, is_savings=False)
+a2 = b.new_account(c2, is_savings=False)
 
 a = Account(c1)
 a.checkPin(c1)
