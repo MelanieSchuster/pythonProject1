@@ -81,10 +81,8 @@ class Bank:
         from_account_id.charge(amount, amount)
         to_account_id.deposit(amount, amount)
         pass
-    # validation of IBAN
-        #TODO - please note that you might need to find the "from" and "to" accounts in the list
+        # please note that you might need to find the "from" and "to" accounts in the list
         # based on the ids provided as input
-    #if ID is in dict, dann mach die transaktion, ansonsten print "wrong ID" oder so
     def __repr__(self):
         return 'Bank\n{}\n{}'.format(self.cust_list, self.acc_list)
 
