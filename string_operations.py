@@ -21,6 +21,7 @@ if __name__ == '__main__':
     print(ord('A'))
     print(ord('\t'))
     print(ord('\n'))
+# The ord() function returns an integer representing the Unicode character.
 
     s3 = 'abc\b'
     print(s3)

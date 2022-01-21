@@ -15,8 +15,9 @@ print('cf:{}'.format(cf))
 print(1.79e+308)
 print(1.8e+308)
 
+print('--------------')
 bb = 0b11111111
-
+# hexydecimal system
 print(bb)
 
 bx = 0xff
@@ -27,11 +28,13 @@ print(bb/bx)
 f = 5
 
 print(f**3)
+#f hoch 3
 g = 12
 print('div g: {}'.format(g % 5))
 
 h = 'ff'
 print(int(h, 16))
+#geb mir h als zahl im hexadezimalsystem aus
 h1 = '525165'
 h1i = int(h1)
 print(h1.isdigit())
