@@ -14,11 +14,13 @@ for i in range(0, rows):
         sumRow = sumRow + l2d[i][j];
     print("Sum of " + str(i+1) +" row: " + str(sumRow));
 #his examples:
+print('--------------')
 sums = []
 for el in l2d:
     sums.append(sum(el))
 print(sums)
 
+print('--------------')
 #sums2 = [sum(el) for el in l2d if len(el)>2]
 sums2 = [sum(el) for el in l2d]
 print(sums2)
@@ -28,7 +30,7 @@ for el in l2d:
     for i in range(len(el)):
             sums_cols[i] += el[i]
 print(sums_cols)
-
+print('--------------')
 #using numpy
 #import numpy as np
 #print(np.sum(l2d, axis=0))
