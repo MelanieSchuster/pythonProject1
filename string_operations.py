@@ -12,6 +12,7 @@ if __name__ == '__main__':
     print(s[4:])
     print(s[-2:])
     print(s[-5:-3])
+    #umgedreht von oben,
 
     print('------------------')
     s2 = 'abc\ndef\t\tefg\\eyet\ye'

@@ -1,4 +1,4 @@
-t1 = (5, 8, 8)
+t1 = (5, 2, 8)
 print(t1[2])
 #second element of the list will be displayed
 

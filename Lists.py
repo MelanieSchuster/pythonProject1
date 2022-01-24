@@ -20,6 +20,7 @@ l1.insert(3, 50662)
 print(l1)
 print(len(l1))
 
+print('-------------')
 s1 = set(l1)
 print(s1)
 l2 = list(s1)

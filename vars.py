@@ -38,8 +38,11 @@ print(int(h, 16))
 h1 = '525165'
 h1i = int(h1)
 print(h1.isdigit())
+#only nummers
 print(h1.isalpha())
+#alphabet
 print(h1.isalnum())
+#alphabet OR numerical
 
 print(type(h1))
 print(type(h1i))
@@ -49,3 +52,6 @@ print(type(fa))
 fa = 100.3563
 print(type(fa))
 print(round(fa, ))
+
+g=[5,6.5,8.7]
+print(type(g))

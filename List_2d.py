@@ -8,11 +8,11 @@ rows = len(l2d);
 cols = len(l2d[0]);
 # sum rows
 #my version:
-for i in range(0, rows):
-    sumRow = 0;
-    for j in range(0, cols):
-        sumRow = sumRow + l2d[i][j];
-    print("Sum of " + str(i+1) +" row: " + str(sumRow));
+#for i in range(0, rows):
+ #   sumRow = 0;
+  #  for j in range(0, cols):
+   #     sumRow = sumRow + l2d[i][j];
+   # print("Sum of " + str(i+1) +" row: " + str(sumRow));
 #his examples:
 print('--------------')
 sums = []
@@ -31,6 +31,19 @@ for el in l2d:
             sums_cols[i] += el[i]
 print(sums_cols)
 print('--------------')
+
+#sums_cols = [0, 0, 0]
+sums_cols = []
+#sums_cols = [0, 0, 0]
+for el in l2d:
+    for i in range(len(el)):
+        if len(sums_cols) > i:
+            sums_cols[i] += el[i]
+        else:
+            sums_cols.append(el[i])
+print(sums_cols)
+
+print('-------------')
 #using numpy
 #import numpy as np
 #print(np.sum(l2d, axis=0))

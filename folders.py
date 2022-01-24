@@ -27,7 +27,6 @@ some_folder = 'C:/Users/schus/Documents/Bewerbungsunterlagen'
 print(some_folder)
 print('Sum space: {}'.format(sum_space(some_folder)))
 
-
 # 1. include summing space occupied for folders with their content
 # Hint: use recursion
 # step 1: create a function that iterates over files in a folder and returns the sum of the size
